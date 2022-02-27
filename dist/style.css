@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Graduate', sans-serif;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(161, 0, 0), #000);
+}
+
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+    background-color: rgba(161, 161, 161, 0.75);
+    border: 2px solid #fff;
+    outline: 0;
+    font-size: 2rem;
+
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(190, 190, 190, 0.75);
+    cursor: pointer;
+}
+
+.span_two {
+    grid-column: 2 span;
+}
+
+/* button {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+} */
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px;
+}
+
+.output .previous_output {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.output .current_output {
+    color: rgb(172, 172, 172);
+    font-size: 2rem;
+
+}
